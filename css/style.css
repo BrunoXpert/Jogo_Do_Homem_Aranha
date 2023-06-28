@@ -1,0 +1,115 @@
+* {
+margin: 1;
+padding: 0;
+box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 600px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: solid;
+    border-bottom: 15px solid;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /* background:linear-gradient(#022558, #2194be); */
+}
+
+.ceu {
+  position: absolute; 
+  /* opacity: 80%;  */
+  /* animation: ceu-animation 6000s infinite linear; */
+  align-items: center;
+  width: 1350px;
+  height: 580px;
+}
+
+.pipe {
+    position: absolute;
+    bottom:0;
+    width:150px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+.corre{
+    position: absolute;
+    width: 150px;
+    bottom: 0;   
+}
+.jump{
+    animation: jump 500ms ease-out;
+}
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to {
+        right:100%;
+    }
+}
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;  
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes ceu-animation {
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+
+.pontuacao {
+    list-style-type: none;
+    position: relative;
+    background-color: transparent;
+    height: 60px;
+    margin-left: 1180px;
+    margin-top: 10px;
+    opacity: 80%;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: "sofia", sans-serif;
+}
+
+.retry {
+    width: 50px;
+    margin-left: 1280px;
+    /* margin-top: 450px; */
+    margin-top: -60px;
+    position: absolute;
+    padding: 10px 0px;
+    color: black;  
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    text-transform: verdana;
+    transition: background 15s;
+    border-radius: 30px;
+    opacity: 0.8;
+    border: 0px solid ;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+   }
+   
+   .retry:hover {
+       background-color: #c51313; 
+       color: #ffffff;
+   }
+   
